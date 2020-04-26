@@ -21,6 +21,14 @@ class UserService extends Service {
       total: total[0].total,
     };
   }
+  async login(params = {}) {
+    const { app } = this;
+    const { name } = params;
+    const data = await app.mysql.query(`select  * from users where name = "${name}"`);
+    return {
+      data,
+    };
+  }
 }
 
 module.exports = UserService;

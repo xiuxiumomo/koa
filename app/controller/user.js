@@ -20,5 +20,19 @@ class UserController extends Controller {
     const userInfo = await ctx.service.user.postList(params);
     this.success(userInfo);
   }
+  async login() {
+    const { ctx, app } = this;
+    const { name } = ctx.request.body;
+    const user = await ctx.service.user.login({ name });
+    if (user) {
+      const token = app.jwt.sign({
+        name: user.name,
+      }, app.config.jwt.secret);
+      this.success({
+        data: user.data[0],
+        token,
+      });
+    }
+  }
 }
 module.exports = UserController;

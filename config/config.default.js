@@ -16,7 +16,7 @@ module.exports = appInfo => {
   const userConfig = {
     mysql: {
       client: {
-        host: '192.168.26.128',
+        host: '127.0.0.1',
         port: '3306',
         user: 'root',
         password: '123456',
@@ -30,8 +30,10 @@ module.exports = appInfo => {
         enable: false,
       },
     },
+    jwt: {
+      secret: '123456',
+    },
   };
-
   return {
     ...config,
     ...userConfig,

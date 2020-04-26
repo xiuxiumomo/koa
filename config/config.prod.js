@@ -37,6 +37,7 @@ module.exports = appInfo => {
       },
     },
   };
+  console.log('走的是product');
 
   return {
     ...config,
