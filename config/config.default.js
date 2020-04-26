@@ -16,7 +16,7 @@ module.exports = appInfo => {
   const userConfig = {
     mysql: {
       client: {
-        host: '127.0.0.1',
+        host: '193.112.176.177',
         port: '3306',
         user: 'root',
         password: '123456',
