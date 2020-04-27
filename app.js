@@ -6,11 +6,11 @@ const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser');
 const logger = require('koa-logger');
 const Routers = require('./routes/index');
+const util = require('./utils');
 const cors = require('koa-cors');
 const jwt = require('koa-jwt');
 const secret  = require('./config/secret');
 const JWTToken = require('./middleware/JWTToken');
-console.log(process.env)
 //开启jwt验证
 //app.use(JWTToken());
 app.use(cors());
@@ -48,8 +48,8 @@ app.use(async (ctx, next) => {
 })
 
 // routes 注册路由
-app.use(Routers.routes(), Routers.allowedMethods());
-
+//app.use(Routers.routes(), Routers.allowedMethods());
+util.addRoutes.call(app,Routers); //注册路由
 
 // error-handling
 app.on('error', (err, ctx) => {
