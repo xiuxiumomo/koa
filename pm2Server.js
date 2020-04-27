@@ -1,8 +1,7 @@
 'use strict';
-const egg = require('egg');
-const workers = Number(process.argv[2] || require('os').cpus().length);
-egg.startCluster({
-  workers,
+require('egg').startCluster({
   baseDir: __dirname,
   port: process.env.PORT || 7001,
+  workers: 2,
+  https: false, // nginx https
 });
