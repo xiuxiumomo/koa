@@ -1,6 +1,12 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('koa', 'root', '123456', {
-    host: '193.112.176.177',
+const config = require('../config');
+const { dbName,
+        dbUserName,
+        dbPassWord,
+        dbIP } = config;
+        console.log(config)
+const sequelize = new Sequelize(dbName, dbUserName, dbPassWord, {
+    host: dbIP,
     dialect: 'mysql',
     operatorsAliases: false,
     dialectOptions: {
