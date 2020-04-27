@@ -10,19 +10,19 @@ const cors = require('koa-cors');
 const jwt = require('koa-jwt');
 const secret  = require('./config/secret');
 const JWTToken = require('./middleware/JWTToken');
-
+console.log(process.env)
 //开启jwt验证
-app.use(JWTToken());
+//app.use(JWTToken());
 app.use(cors());
 //注册和登录不需要验证
-app.use(jwt({secret: secret.sign}).unless({
-    path: [
-        // 注册
-        /^\/api\/v1\/user\/register/,
-        // 登录
-        /^\/api\/v1\/user\/login/,
-    ]
-}))
+// app.use(jwt({secret: secret.sign}).unless({
+//     path: [
+//         // 注册
+//         /^\/api\/v1\/user\/register/,
+//         // 登录
+//         /^\/api\/v1\/user\/login/,
+//     ]
+// }))
 
 // error handler
 onerror(app);
