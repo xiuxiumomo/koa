@@ -4,5 +4,5 @@ module.exports = {
     dbName: 'koa',    //数据库名字
     dbUserName: 'root', //用户名
     dbPassWord: '123456',
-    dbIP: '127.0.0.1'
+    dbIP: '193.112.176.177'
 }
