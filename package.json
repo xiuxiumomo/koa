@@ -7,7 +7,8 @@
     "wstart": "set NODE_ENV=development && node bin/www",
     "lstart": "export NODE_ENV=production && node bin/www",
     "dev": "NODE_ENV=development ./node_modules/.bin/nodemon bin/www",
-    "prd": "NODE_ENV=product && pm2 start bin/www",
+    "prd": "pm2 start bin/www",
+    "pm2": "pm2 start process.json --env_prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
