@@ -3,12 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=development && node bin/www",
-    "wstart": "set NODE_ENV=development && node bin/www",
-    "lstart": "export NODE_ENV=production && node bin/www",
-    "dev": "NODE_ENV=development ./node_modules/.bin/nodemon bin/www",
+    "start": "cross-env NODE_ENV=development  node bin/www",
+    "dev": "cross-env NODE_ENV=development ./node_modules/.bin/nodemon bin/www",
     "prd": "pm2 start bin/www",
-    "pm2": "pm2 start process.json --env_prod",
+    "pm2": "cross-env NODE_ENV=production pm2 start bin/www --name='koa_api' --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -25,6 +23,7 @@
     "pug": "^2.0.0-rc.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "jsonwebtoken": "^8.5.1",
     "koa-cors": "0.0.16",
     "koa-jwt": "^3.5.1",
