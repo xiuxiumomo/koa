@@ -1,8 +1,6 @@
 const router = require('../base');
 const ArticleController = require('../../controllers/article'); //用户
 
-
-
 /**
  * 文章接口
  */

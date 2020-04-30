@@ -1,7 +1,7 @@
 const UserModel = require('../models/user');
 const jwt = require('jsonwebtoken');
 const secret = require('../config/secret');
-
+const BaseCpntrollers = require('./BaseController'); //基础控制器用于调试状态码
 const ServiceStatus = require('./status.config');
 let successCode = ServiceStatus.success.code;
 let successMsg = ServiceStatus.success.msg;
@@ -25,26 +25,21 @@ class userController {
                 const ret = await UserModel.createData(req);
                 // 把刚刚新建的文章ID查询文章详情，且返回新创建的文章信息
                 const data = await UserModel.getData(ret.id);
-                ctx.response.status = successCode;
+                let res = BaseCpntrollers.success({data,msg: '创建用户成功~'})
                 ctx.body = {
-                    code: successCode,
-                    msg: '创建用户成功',
-                    data
+                    ...res
                 }
 
             } catch (err) {
-                ctx.response.status = failCode;
+                let res = BaseCpntrollers.fail({data,msg: '创建用户失败~',err})
                 ctx.body = {
-                    code: failCode,
-                    msg: '创建用户失败',
-                    err
+                    ...res
                 }
             }
         } else {
-            ctx.response.status = failCode;
+            let res = BaseCpntrollers.fail({msg: '参数不全~'})
             ctx.body = {
-                code: failCode,
-                msg: '参数不齐全',
+                ...res
             }
         }
 
@@ -63,11 +58,9 @@ class userController {
             const token = jwt.sign(userToken, secret.sign, {expiresIn: '7day'});
             try{
                 let res = await UserModel.checkData(data);
-                ctx.response.status = successCode;
+                let rData = BaseCpntrollers.success({msg: '登录成功~',token})
                 ctx.body = {
-                    code: successCode,
-                    msg: '登录成功',
-                    token
+                    ...rData
                 }
 
             }catch (err) {
