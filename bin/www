@@ -13,7 +13,7 @@ console.log(config.dbIP);
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3300');
+var port = normalizePort(process.env.PORT || '9529');
 // app.set('port', port);
 
 /**
