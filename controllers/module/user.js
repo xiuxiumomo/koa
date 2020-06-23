@@ -1,8 +1,8 @@
-const UserModel = require('../models/user');
+const UserModel = require('../../models/user');
 const jwt = require('jsonwebtoken');
-const secret = require('../config/secret');
+const secret = require('../../config/secret');
 
-const ServiceStatus = require('./status.config');
+const ServiceStatus = require('../status.config');
 let successCode = ServiceStatus.success.code;
 let successMsg = ServiceStatus.success.msg;
 let failCode = ServiceStatus.fail.code;

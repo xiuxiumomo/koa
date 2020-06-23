@@ -4,7 +4,7 @@ const { dbName,
         dbUserName,
         dbPassWord,
         dbIP } = config;
-        console.log(config)
+       
 const sequelize = new Sequelize(dbName, dbUserName, dbPassWord, {
     host: dbIP,
     dialect: 'mysql',

@@ -1,5 +1,5 @@
 var BaseController = {
-    success: function(params) {
+    success: function(params={}) {
         return {
             code: 200,
             msg: '成功~',
@@ -7,7 +7,7 @@ var BaseController = {
 
         }
     },
-    fail: function(params) {
+    fail: function(params={}) {
         return {
             code: 400,
             msg: '请求失败~',

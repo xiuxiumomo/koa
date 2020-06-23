@@ -1,5 +1,5 @@
 const router = require('../base');
-const UserController = require('../../controllers/user'); //用户
+const UserController = require('../../controllers/module/user'); //用户
 /**
  * 用户
  * */

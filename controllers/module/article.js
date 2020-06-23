@@ -1,6 +1,6 @@
-const ArticleModel = require('../models/article');
-const ServiceStatus = require('./status.config');
-var BaseController = require('./BaseController');
+const ArticleModel = require('../../models/article');
+const ServiceStatus = require('../status.config');
+var BaseController = require('../BaseController');
 class ArticleController {
 
     /**

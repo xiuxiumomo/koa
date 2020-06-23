@@ -1,5 +1,5 @@
 const router = require('../base');
-const ArticleController = require('../../controllers/article'); //用户
+const ArticleController = require('../../controllers/module/article'); //用户
 
 
 
@@ -13,7 +13,7 @@ router.post('/article', ArticleController.create);
 // 获取文章详情接口（路由）
 router.get('/article/:id', ArticleController.detail);
 // 获取所有文章
-router.post('/article/getList', ArticleController.getList);
+router.get('/article/getList', ArticleController.getList);
 //更新文章
 router.post('/article/update',ArticleController.updateArticle);
 //删除文章
