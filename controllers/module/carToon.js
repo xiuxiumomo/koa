@@ -68,6 +68,62 @@ class CarToonController {
         }
         
     }
+    /**
+     * 获取详情
+     */
+    static async carToonDetail(ctx) {
+        let {mhurl1=''} = ctx.query;
+        if(!mhurl1) {
+            let res = await BaseController.fail({ code: 416, msg: '漫画url必填~' })
+            ctx.body = {
+                ...res
+            }
+            return;
+        }
+        try {
+            let { code = 0, list = [],data=[]} = await carToonBase({ mhurl1 });
+           
+            if (code == 0) {
+                let res = BaseController.success({ list,data })
+                ctx.body = {
+                    ...res
+                }
+            }
+        }catch(e){
+            let res = await BaseController.fail({ code: 500, msg: '请求错误~' })
+            ctx.body = {
+                ...res
+            }
+        }
+    }
+    /**
+     * 章节内容
+     */
+    static async carToonChapterDetail(ctx) {
+        let {mhurl2=''} = ctx.query;
+        if(!mhurl2) {
+            let res = await BaseController.fail({ code: 416, msg: '漫画url必填~' })
+            ctx.body = {
+                ...res
+            }
+            return;
+        }
+        try {
+            let { code = 0, list = []} = await carToonBase({ mhurl1 });
+           
+            if (code == 0) {
+                let res = BaseController.success({ list })
+                ctx.body = {
+                    ...res
+                }
+            }
+        }catch(e){
+            let res = await BaseController.fail({ code: 500, msg: '请求错误~' })
+            ctx.body = {
+                ...res
+            }
+        }
+    }
 
 
 }
