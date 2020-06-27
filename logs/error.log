@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2020-06-27 16:18:42: Sat, 27 Jun 2020 08:18:42 GMT koa deprecated Support for generators will be removed in v3. See the documentation for examples of how to convert old middleware https://github.com/koajs/koa/blob/master/docs/migration.md at app.js:16:5
 2020-06-27 16:18:42: (node:14232) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
 2020-06-27 16:18:42: Port 9001 is already in use
@@ -94,3 +95,5 @@
 2020-06-27 16:50:05: Ignoring invalid configuration option passed to Connection: collate. This is currently a warning, but in future versions of MySQL2, an error will be thrown if you pass an invalid configuration option to a Connection
 2020-06-27 16:50:06: Ignoring invalid configuration option passed to Connection: collate. This is currently a warning, but in future versions of MySQL2, an error will be thrown if you pass an invalid configuration option to a Connection
 2020-06-27 16:50:06: Ignoring invalid configuration option passed to Connection: collate. This is currently a warning, but in future versions of MySQL2, an error will be thrown if you pass an invalid configuration option to a Connection
+=======
+>>>>>>> 144f772ce7f19e00a3d5933b34609093304362fb

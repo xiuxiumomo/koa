@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2020-06-27 16:05:19:   <-- GET /api/v1/novel/novelDetail?xsurl1=pbdhttp%3A%2F%2Fwww.qiqint.la%2Fbook%2F39762.html
 2020-06-27 16:05:20: GET /api/v1/novel/novelDetail?xsurl1=pbdhttp%3A%2F%2Fwww.qiqint.la%2Fbook%2F39762.html - 296ms
 2020-06-27 16:05:20:   --> GET /api/v1/novel/novelDetail?xsurl1=pbdhttp%3A%2F%2Fwww.qiqint.la%2Fbook%2F39762.html 200 1,165ms 34b
@@ -66,3 +67,5 @@
 2020-06-27 16:50:06: Executing (default): CREATE TABLE IF NOT EXISTS `article` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `author` VARCHAR(255) NOT NULL, `content` TEXT NOT NULL, `category` VARCHAR(255) NOT NULL, `createdAt` DATETIME, `updatedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
 2020-06-27 16:50:06: Executing (default): SHOW INDEX FROM `user`
 2020-06-27 16:50:06: Executing (default): SHOW INDEX FROM `article`
+=======
+>>>>>>> 144f772ce7f19e00a3d5933b34609093304362fb
