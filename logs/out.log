@@ -20,3 +20,19 @@
 2020-06-27 16:18:57:   <-- GET /api/v1/novel/novelChapterDetail?xsurl2=pbdhttp://www.qiqint.la/39762/11728854.html
 2020-06-27 16:18:57: GET /api/v1/novel/novelChapterDetail?xsurl2=pbdhttp://www.qiqint.la/39762/11728854.html - 163ms
 2020-06-27 16:18:57:   --> GET /api/v1/novel/novelChapterDetail?xsurl2=pbdhttp://www.qiqint.la/39762/11728854.html 200 169ms 38b
+2020-06-27 16:19:56: Executing (default): CREATE TABLE IF NOT EXISTS `user` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `email` VARCHAR(255), `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME, `updatedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-27 16:19:56: Executing (default): CREATE TABLE IF NOT EXISTS `article` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `author` VARCHAR(255) NOT NULL, `content` TEXT NOT NULL, `category` VARCHAR(255) NOT NULL, `createdAt` DATETIME, `updatedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-27 16:19:57: Executing (default): SHOW INDEX FROM `user`
+2020-06-27 16:19:57: Executing (default): SHOW INDEX FROM `article`
+2020-06-27 16:20:02: Executing (default): CREATE TABLE IF NOT EXISTS `user` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `email` VARCHAR(255), `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME, `updatedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-27 16:20:02: Executing (default): CREATE TABLE IF NOT EXISTS `article` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `author` VARCHAR(255) NOT NULL, `content` TEXT NOT NULL, `category` VARCHAR(255) NOT NULL, `createdAt` DATETIME, `updatedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-27 16:20:02: Executing (default): SHOW INDEX FROM `user`
+2020-06-27 16:20:02: Executing (default): SHOW INDEX FROM `article`
+2020-06-27 16:20:22: Executing (default): CREATE TABLE IF NOT EXISTS `user` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `email` VARCHAR(255), `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME, `updatedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-27 16:20:22: Executing (default): CREATE TABLE IF NOT EXISTS `article` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `author` VARCHAR(255) NOT NULL, `content` TEXT NOT NULL, `category` VARCHAR(255) NOT NULL, `createdAt` DATETIME, `updatedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-27 16:20:22: Executing (default): SHOW INDEX FROM `user`
+2020-06-27 16:20:22: Executing (default): SHOW INDEX FROM `article`
+2020-06-27 16:22:39: Executing (default): CREATE TABLE IF NOT EXISTS `user` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `email` VARCHAR(255), `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME, `updatedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-27 16:22:39: Executing (default): CREATE TABLE IF NOT EXISTS `article` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `author` VARCHAR(255) NOT NULL, `content` TEXT NOT NULL, `category` VARCHAR(255) NOT NULL, `createdAt` DATETIME, `updatedAt` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-27 16:22:39: Executing (default): SHOW INDEX FROM `user`
+2020-06-27 16:22:39: Executing (default): SHOW INDEX FROM `article`
