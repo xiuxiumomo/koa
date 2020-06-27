@@ -48,7 +48,7 @@ class novelController {
             return;
         }
         try {
-            let { code = 0, list = {}, data = {} } = await movieBase({ ysurl });
+            let { code = 0, list = {}, data = {} } = await novelBase({ xsurl1});
             if (code == 0) {
                 let res = BaseController.success({ data, list })
                 ctx.body = {
@@ -77,9 +77,9 @@ class novelController {
             return;
         }
         try {
-            let { code = 0, content=[] } = await movieBase({ ysurl });
+            let { code = 0, content=[] } = await novelBase({ xsurl2 });
             if (code == 0) {
-                let res = BaseController.success({ data:content })
+                let res = BaseController.success({ data: content })
                 ctx.body = {
                     ...res
                 }
